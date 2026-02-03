@@ -20,12 +20,12 @@ const StationaryForm = (props) => {
         let colorprint=document.getElementById('colorprint');
         let lemination=document.getElementById('lemination');
         let spiralbinding=document.getElementById('spiralbinding');
-        let payment=document.getElementById('paynow');
+       
 
-        if (payment.checked) {
-            console.log("Payment is true");
+        // if (payment.checked) {
+        //     console.log("Payment is true");
             
-        }
+        // }
 
         if (photocopy.checked) {
             orders.push("Photocopy")
@@ -63,7 +63,7 @@ const StationaryForm = (props) => {
                 <div id="services" style={{display:'flex'}}>
 
                    <div className='options'>
-                    <label htmlFor="photocopy">PhotoCopy for Rs. 2 per page</label>
+                    <label htmlFor="photocopy">PhotoCopy for Rs. 3 per page</label>
                      <input type="checkbox" name="service" id="photocopy" />
                    </div>
                    <div className='options'>

@@ -26,10 +26,7 @@ export default function Home() {
          
 
         </div>
-        <div id="snacks">
-          <Food shopName="Nandu hotel" upiID='upi://pay?pa=9263389448@upi&pn=Akarsh&am=5&cu=INR'/>
         
-        </div>
         <div id="Stationary">
             <StationaryForm cyberCafe="Sharma Cyber Cafe" upiID={`upi://pay?pa=${process.env.NEXT_PUBLIC_SHARMA_CYBER_CAFE}@upi&pn=Sharma%20Cyber%20Cafe&cu=INR`}/>
         </div>
