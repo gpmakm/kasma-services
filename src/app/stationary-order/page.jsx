@@ -12,7 +12,7 @@ const StationaryForm = (props) => {
 
     let orders=new Array();
 
-    const sendData=(e)=>{
+    const sendData=async (e)=>{
         e.preventDefault();
         let photocopy=document.getElementById('photocopy');
         let colorcopy=document.getElementById('colorcopy');
@@ -43,9 +43,21 @@ const StationaryForm = (props) => {
 
         orders.join(" ",orders)
 
-//         console.log("Username: "+username+"\nPhone: "+phone+"\n"+orders);
-// console.log(process.env.NEXT_PUBLIC_VENDOR_PHONE
-// );
+        let url=process.env.NEXT_PUBLIC_BACKEND_URL;
+
+        let data=await fetch(url,{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify({
+                name:username,
+                phone:phone,
+                service:"cyber cafe stationary",
+            })
+        })
+        let res=await data.json();
+        alert(res.message);
 
        window.open(`https://wa.me/${process.env.NEXT_PUBLIC_SHARMA_CYBER_CAFE}?text=Name%20:%20${username}%0APhone%20:%20${phone}%0A${orders}`)
     }

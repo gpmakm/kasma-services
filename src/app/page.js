@@ -14,7 +14,7 @@ export default function Home() {
         <div className="container" >
          
             Welcome to Kasma Services! We are dedicated to providing you with
-            top-notch <a href="#snacks">snacks (coming soon) </a>and <a href="#Stationary">stationary services</a>. Whether you're craving
+            top-notch <a href="#snacks">snacks (coming soon) </a>and <a href="#Stationary">cyber cafe stationary services</a>. Whether you're craving
             delicious meals or need essential stationery supplies, we've got you
             covered. Our user-friendly platform allows you to easily browse menus,place orders, and connect with local vendors. Experience convenience, quality, and reliability all in one place with Kasma Services. Your
             satisfaction is our priority!
