@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import { useQRCode } from 'next-qrcode'
+import { set } from 'mongoose'
 
 const StationaryForm = (props) => {
     const [username,setUsername]=useState("")
@@ -9,11 +10,13 @@ const StationaryForm = (props) => {
  const [paymentMode, setPaymentMode] = useState("")
     const [tid, setTid] = useState("");
     const {Canvas}=useQRCode();
+    const [text,setText]=useState("Send message using whatsapp");
 
     let orders=new Array();
 
     const sendData=async (e)=>{
         e.preventDefault();
+        setText("Processing your order...");
         let photocopy=document.getElementById('photocopy');
         let colorcopy=document.getElementById('colorcopy');
         let blackandwhiteprint=document.getElementById('blackandwhiteprint');
@@ -168,7 +171,7 @@ const StationaryForm = (props) => {
                         </div>
                     )}
                 </div>
-                <button>Send message using whatsapp</button>
+                <button value={text}></button>
         </form>
        
     </div>
