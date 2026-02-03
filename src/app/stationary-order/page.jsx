@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { useQRCode } from 'next-qrcode'
-import { set } from 'mongoose'
+
 
 const StationaryForm = (props) => {
     const [username,setUsername]=useState("")
