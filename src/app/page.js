@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Food } from "./food-order/page";
+import { Food } from "../../food-order/page";
 import StationaryForm from "./stationary-order/page";
 import Navbar from "./Navbar";
 
@@ -26,10 +26,10 @@ export default function Home() {
          
 
         </div>
-        {/* <div id="snacks">
+        <div id="snacks">
           <Food shopName="Nandu hotel" upiID='upi://pay?pa=9263389448@upi&pn=Akarsh&am=5&cu=INR'/>
         
-        </div> */}
+        </div>
         <div id="Stationary">
             <StationaryForm cyberCafe="Sharma Cyber Cafe" upiID={`upi://pay?pa=${process.env.NEXT_PUBLIC_SHARMA_CYBER_CAFE}@upi&pn=Sharma%20Cyber%20Cafe&cu=INR`}/>
         </div>

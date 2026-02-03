@@ -197,7 +197,7 @@ export const Food = (props) => {
                         </div>
                     )}
                 </div>
-                <button disabled={true}>Place order</button>
+                <button type='button' disabled>Place order</button>
             </form>
         </div>
     )
