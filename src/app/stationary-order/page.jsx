@@ -172,7 +172,7 @@ setIsSubmitting(false);
                     )}
                 </div>
                 <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Submitting..." : "Submit"}
+        {isSubmitting ? "sending..." : "Send using whatsapp"}
       </button>
         </form>
        
