@@ -1,64 +1,37 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Food } from "./food-order/page";
+import StationaryForm from "./stationary-order/page";
+import Navbar from "./Navbar";
 
 export default function Home() {
+//console.log(process.env.NEXT_PUBLIC_VENDOR_PHONE);
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        
+        <div className="container" >
+         
+            Welcome to Kasma Services! We are dedicated to providing you with
+            top-notch <a href="#snacks">snacks (coming soon) </a>and <a href="#Stationary">stationary services</a>. Whether you're craving
+            delicious meals or need essential stationery supplies, we've got you
+            covered. Our user-friendly platform allows you to easily browse menus,place orders, and connect with local vendors. Experience convenience, quality, and reliability all in one place with Kasma Services. Your
+            satisfaction is our priority!
+
+            <div  style={{display:'flex',flexDirection:'column'}}>
+              <code>Charges for snacks: Charges are mentioned but if you ordered for delievery then the prices will be increased from Rs.10 to Rs. 20</code>
+            <code>Cyber cafe servives will be delievered only at evening time</code>
+            </div>
+         
+
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        {/* <div id="snacks">
+          <Food shopName="Nandu hotel" upiID='upi://pay?pa=9263389448@upi&pn=Akarsh&am=5&cu=INR'/>
+        
+        </div> */}
+        <div id="Stationary">
+            <StationaryForm cyberCafe="Sharma Cyber Cafe" upiID={`upi://pay?pa=${process.env.NEXT_PUBLIC_SHARMA_CYBER_CAFE}@upi&pn=Sharma%20Cyber%20Cafe&cu=INR`}/>
         </div>
       </main>
     </div>
