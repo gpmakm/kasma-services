@@ -10,13 +10,13 @@ const StationaryForm = (props) => {
  const [paymentMode, setPaymentMode] = useState("")
     const [tid, setTid] = useState("");
     const {Canvas}=useQRCode();
-    const [text,setText]=useState("Send message using whatsapp");
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     let orders=new Array();
 
     const sendData=async (e)=>{
         e.preventDefault();
-        setText("Processing your order...");
+        setIsSubmitting(true);
         let photocopy=document.getElementById('photocopy');
         let colorcopy=document.getElementById('colorcopy');
         let blackandwhiteprint=document.getElementById('blackandwhiteprint');
@@ -61,7 +61,7 @@ const StationaryForm = (props) => {
         })
         let res=await data.json();
         alert(res.message);
-
+setIsSubmitting(false);
        window.open(`https://wa.me/${process.env.NEXT_PUBLIC_SHARMA_CYBER_CAFE}?text=Name%20:%20${username}%0APhone%20:%20${phone}%0A${orders}`)
     }
 
@@ -171,7 +171,9 @@ const StationaryForm = (props) => {
                         </div>
                     )}
                 </div>
-                <button value={text}></button>
+                <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? "Submitting..." : "Submit"}
+      </button>
         </form>
        
     </div>
