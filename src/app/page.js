@@ -21,7 +21,7 @@ export default function Home() {
 
             <div  style={{display:'flex',flexDirection:'column'}}>
               <code>Charges for snacks: Charges are mentioned but if you ordered for delievery then the prices will be increased from Rs.10 to Rs. 20</code>
-            <code>Cyber cafe servives will be delievered only at evening time</code>
+            <code>Cyber cafe services will be delievered only at evening time</code>
             </div>
          
 

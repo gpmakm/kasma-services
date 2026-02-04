@@ -47,6 +47,8 @@ const StationaryForm = (props) => {
         orders.join(" ",orders)
 
         let url=process.env.NEXT_PUBLIC_BACKEND_URL;
+     
+        
 
         let data=await fetch(url,{
             method:'POST',
@@ -62,7 +64,12 @@ const StationaryForm = (props) => {
         let res=await data.json();
         alert(res.message);
 setIsSubmitting(false);
-       window.open(`https://wa.me/${process.env.NEXT_PUBLIC_SHARMA_CYBER_CAFE}?text=Name%20:%20${username}%0APhone%20:%20${phone}%0A${orders}`)
+     const message = `Name: ${username}\nPhone: ${phone}\n${orders.join(", ")}`;
+
+const waUrl = `https://wa.me/${process.env.NEXT_PUBLIC_SHARMA_CYBER_CAFE}?text=${encodeURIComponent(message)}`;
+
+window.location.href = waUrl;  // redirects to WhatsApp
+
     }
 
   return (
