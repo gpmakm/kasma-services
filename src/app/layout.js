@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2797882078011980"
           crossOrigin="anonymous"
-        ></script>
+        />
       </head>
         <Navbar/>
         {children}
