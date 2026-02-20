@@ -3,12 +3,17 @@ import styles from "./page.module.css";
 import { Food } from "../../food-order/page";
 import StationaryForm from "./stationary-order/page";
 import Navbar from "./Navbar";
-
+import Head from "next/head";
 export default function Home() {
 //console.log(process.env.NEXT_PUBLIC_VENDOR_PHONE);
 
   return (
+   
     <div className={styles.page}>
+       <Head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2797882078011980"
+     crossorigin="anonymous"></script>
+    </Head>
       <main className={styles.main}>
        
         <div className="container" >
