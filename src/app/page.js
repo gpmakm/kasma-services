@@ -1,19 +1,17 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Food } from "../../food-order/page";
-import StationaryForm from "./stationary-order/page";
+import StationaryForm from "./cyber-cafe-order/page";
 import Navbar from "./Navbar";
-import Head from "next/head";
+import StItem from "./stationary-order/page";
+
 export default function Home() {
 //console.log(process.env.NEXT_PUBLIC_VENDOR_PHONE);
 
   return (
    
     <div className={styles.page}>
-       <Head>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2797882078011980"
-     crossorigin="anonymous"></script>
-    </Head>
+       
       <main className={styles.main}>
        
         <div className="container" >
@@ -43,8 +41,11 @@ export default function Home() {
 </div>
         </div>
         
-        <div id="Stationary">
+        <div id="cybercafe">
             <StationaryForm cyberCafe="Sharma Cyber Cafe" upiID={`upi://pay?pa=${process.env.NEXT_PUBLIC_SHARMA_CYBER_CAFE}@upi&pn=Sharma%20Cyber%20Cafe&cu=INR`}/>
+        </div>
+        <div id="stationary">
+          <StItem/>
         </div>
       </main>
     </div>
