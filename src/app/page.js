@@ -4,7 +4,7 @@ import { Food } from "./food-order/page";
 import StationaryForm from "./cyber-cafe-order/page";
 import Navbar from "./Navbar";
 import StItem from "./stationary-order/page";
-import Vegetables from "./groceriesand-vegetables/page";
+import Vegetables from "./groceries-and-vegetables/page";
 
 export default function Home() {
 //console.log(process.env.NEXT_PUBLIC_VENDOR_PHONE);
@@ -18,7 +18,7 @@ export default function Home() {
         <div className="container" >
           <p>
             Welcome to Kasma Services! We are dedicated to providing you with
-            top-notch <a href="#snacksnfood">snacks </a> <a href="#Stationary">stationary items</a>,<a href="#cybercafe">Cyber cafe</a>. Whether you're craving
+            top-notch <a href="#snacksnfood">snacks </a><a href="#stationary">stationary items</a>,<a href="#cybercafe">Cyber cafe</a>. Whether you're craving
             delicious meals or need essential stationery supplies, also need supply of vegetables and grocery items <a href="#vegetablesngroceries">Vegetables and groceries</a> we've got you
             covered. Our user-friendly platform allows you to easily browse menus,place orders, and connect with local vendors. Experience convenience, quality, and reliability all in one place with Kasma Services. Your
             satisfaction is our priority!
