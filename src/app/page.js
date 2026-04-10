@@ -1,9 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Food } from "../../food-order/page";
+import { Food } from "./food-order/page";
 import StationaryForm from "./cyber-cafe-order/page";
 import Navbar from "./Navbar";
 import StItem from "./stationary-order/page";
+import Vegetables from "./groceriesand-vegetables/page";
 
 export default function Home() {
 //console.log(process.env.NEXT_PUBLIC_VENDOR_PHONE);
@@ -17,8 +18,8 @@ export default function Home() {
         <div className="container" >
           <p>
             Welcome to Kasma Services! We are dedicated to providing you with
-            top-notch <a href="#snacks">snacks (coming soon) </a>and <a href="#Stationary">cyber cafe stationary services</a>. Whether you're craving
-            delicious meals or need essential stationery supplies, we've got you
+            top-notch <a href="#snacksnfood">snacks </a> <a href="#Stationary">stationary items</a>,<a href="#cybercafe">Cyber cafe</a>. Whether you're craving
+            delicious meals or need essential stationery supplies, also need supply of vegetables and grocery items <a href="#vegetablesngroceries">Vegetables and groceries</a> we've got you
             covered. Our user-friendly platform allows you to easily browse menus,place orders, and connect with local vendors. Experience convenience, quality, and reliability all in one place with Kasma Services. Your
             satisfaction is our priority!
 </p>
@@ -29,16 +30,6 @@ export default function Home() {
          
 
 
-<div className="partners" id="Partners">
-  <p>
-  <h3>Our partners</h3>
-  <ul>
-    <li>Sharma Cyber Cafe</li>
-    <li>Nandu hotel and mess</li>
-    
-  </ul>
-</p>
-</div>
         </div>
         
         <div id="cybercafe">
@@ -47,6 +38,12 @@ export default function Home() {
         <div id="stationary">
           <StItem/>
         </div>
+       <div id="snacksnfood">
+         <Food upiID={`upi://pay?pa=${process.env.PAY_MERCHANT}@upi&pn=Kasma%20Services%Office&cu=INR`} />
+       </div>
+       <div id="vegetablesngroceries">
+          <Vegetables/>
+       </div>
       </main>
     </div>
   );
