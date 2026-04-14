@@ -7,7 +7,7 @@ const Navbar = () => {
       <span>KASMA SERVICES</span>
       <ul style={{ display: 'flex' }} id='menuItems'>
 
-        <li> <a href="#Snacks">Snacks</a> </li>
+        <li> <a href="#snacksnfood">Snacks</a> </li>
         <li> <a href="#cybercafe">Cyber Cafe Services</a> </li>
         <li> <a href="#stationary">Stationary items</a> </li>
         <li> <a href="#vegetablesngroceries">Vegetables and groceries</a> </li>
