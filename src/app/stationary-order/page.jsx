@@ -4,30 +4,36 @@ import { React, useState } from 'react'
 
 const StItem = () => {
   const stationaryCart = [];
-  const handlePenClick = () => { stationaryCart.push("Pen") }
-  const handleEraserClick = () => { stationaryCart.push("Eraser") }
-  const handleSharpenerClick = () => { stationaryCart.push("Sharpener") }
-  const handleGluClick = () => { stationaryCart.push("Glue") }
-  const handleScissorsClick = () => { stationaryCart.push("Scissors") }
-  const handleNotebookClick = () => { stationaryCart.push("Notebook") }
+  const [username, setUserName] = useState("");
+  const [contact, setContact] = useState()
+  const handlePenClick = (e) => { stationaryCart.push("Pen"); e.target.style = "text-decoration:line-through; content: ' (Added)' " }
+  const handleEraserClick = (e) => { stationaryCart.push("Eraser"); e.target.style = "text-decoration:line-through" }
+  const handleSharpenerClick = (e) => { stationaryCart.push("Sharpener"); e.target.style = "text-decoration:line-through" }
+  const handleGluClick = (e) => { stationaryCart.push("Glue"); e.target.style = "text-decoration:line-through" }
+  const handleScissorsClick = (e) => { stationaryCart.push("Scissors"); e.target.style = "text-decoration:line-through" }
+  const handleNotebookClick = (e) => { stationaryCart.push("Notebook"); e.target.style = "text-decoration:line-through" }
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(stationaryCart);
+    const message ="Name: " + username + "\nContact: " + contact + "\nOrdered items: " + stationaryCart.join(", ");
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${process.env.NEXT_PUBLIC_PAY_MERCHANT}?text=${encodedMessage}`;
+    window.open(whatsappURL)
 
   }
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <ul style={{ margin: 65, padding: 15, listStyleType: 'none', padding:7 }}>
+        <ul style={{ margin: 65, padding: 15, listStyleType: 'none', padding: 7 }}>
 
-
+          <input type="text" name="username" value={username} id="" className="text" placeholder='Enter your name' onChange={(e) => { setUserName(e.target.value) }} required />
+          <input type="number" name="phone" value={contact} id="" className="text" placeholder='Enter your phone number' onChange={(e) => { setContact(e.target.value) }} required />
           <li> <button onClick={handlePenClick
-          }   >Pen</button> </li>
-          <li> <button onClick={handleEraserClick} > Eraser </button> </li>
-          <li> <button onClick={handleSharpenerClick} >Sharpener</button></li>
-          <li> <button onClick={handleGluClick} >Glue</button> </li>
-          <li> <button onClick={handleScissorsClick} >Scissors</button> </li>
-          <li> <button onClick={handleNotebookClick} >Notebook</button> </li>
+          }  type="button" >Pen</button> </li>
+          <li> <button onClick={handleEraserClick} type="button"  > Eraser </button> </li>
+          <li> <button onClick={handleSharpenerClick} type="button" >Sharpener</button></li>
+          <li> <button onClick={handleGluClick} type="button" >Glue</button> </li>
+          <li> <button onClick={handleScissorsClick} type="button" >Scissors</button> </li>
+          <li> <button onClick={handleNotebookClick} type="button" >Notebook</button> </li>
           <code>Click to add an item</code>
         </ul>
         <button> Add to cart 🛒 </button>

@@ -21,6 +21,8 @@ form {
   flex-direction: column;
   justify-self: center;
   border: 1px solid grey;
+  margin-bottom: 55px;
+  
 }
 
 nav {
@@ -68,8 +70,9 @@ justify-self: start;
   margin: 25px;
 }
 .container,
-#snacks,
-#Stationary {
+#snacksnfood,
+#Stationary,#vegetablesngroceries
+ {
   height: 100vh;
   margin: 15px;
   padding: 10px;
