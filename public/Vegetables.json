@@ -1,0 +1,37 @@
+[
+  {
+    "id":1,
+    "vegetableName": "Tomato",
+    "price": 30,
+    "imagePath": "/images/tomato.png",
+    "icon": "🍅"
+  },
+  {
+    "id":2,
+    "vegetableName": "Potato",
+    "price": 25,
+    "imagePath": "/images/potato.png",
+    "icon": "🥔"
+  },
+  {
+    "id":3,
+    "vegetableName": "Carrot",
+    "price": 40,
+    "imagePath": "/images/carrot.png",
+    "icon": "🥕"
+  },
+  {
+    "id":4,
+    "vegetableName": "Spinach",
+    "price": 20,
+    "imagePath": "/images/spinach.png",
+    "icon": "🥬"
+  },
+  {
+    "id":5,
+    "vegetableName": "Onion",
+    "price": 35,
+    "imagePath": "/images/onion.png",
+    "icon": "🧅"
+  }
+]

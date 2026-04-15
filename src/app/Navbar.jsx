@@ -11,7 +11,7 @@ const Navbar = () => {
         <li> <a href="#cybercafe">Cyber Cafe Services</a> </li>
         <li> <a href="#stationary">Stationary items</a> </li>
         <li> <a href="#vegetablesngroceries">Vegetables and groceries</a> </li>
-
+        <li> <a href="/cart">My cart 🛒</a> </li>
       </ul>
     </nav>
   )
