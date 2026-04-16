@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Food } from "./food-order/page";
+import Food  from "./food-order/page";
 import StationaryForm from "./cyber-cafe-order/page";
 import Navbar from "./Navbar";
 import StItem from "./stationary-order/page";
