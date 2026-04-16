@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { useQRCode } from 'next-qrcode';
 
-export const Food = (props) => {
+ const Food = (props) => {
     const { Canvas } = useQRCode()
     const [username, setUsername] = useState("");
     const [userphone, setUserphone] = useState("");
@@ -202,3 +202,5 @@ export const Food = (props) => {
         </div>
     )
 }
+
+export default Food;
