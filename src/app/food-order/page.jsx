@@ -93,7 +93,7 @@ export const Food = (props) => {
                 <label htmlFor="order">Select your order</label>
                 <div>
                     <div>
-                        <label htmlFor="litti">Litti for Rs. 15 per pair</label>
+                        <label htmlFor="litti">Litti for Rs. 15 per pair (Fried)</label>
                         <input type="checkbox" name="item" id="litti" />
 
                     </div>
