@@ -21,13 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-         <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2797882078011980"
-          crossOrigin="anonymous"
-        />
-      </head>
+        
         <Navbar/>
         {children}
       </body>

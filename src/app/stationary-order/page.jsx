@@ -17,9 +17,14 @@ const StItem = () => {
     const message ="Name: " + username + "\nContact: " + contact + "\nOrdered items: " + stationaryCart.join(", ");
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${process.env.NEXT_PUBLIC_PAY_MERCHANT}?text=${encodedMessage}`;
-    window.open(whatsappURL)
+    window.open(whatsappURL);
 
   }
+  const cartItems=[];
+  cartItems.push(stationaryCart);
+  
+  
+  
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -36,10 +41,11 @@ const StItem = () => {
           <li> <button onClick={handleNotebookClick} type="button" >Notebook</button> </li>
           <code>Click to add an item</code>
         </ul>
-        <button> Add to cart 🛒 </button>
+        <button> Place order </button>
       </form>
     </div>
   )
 }
 
 export default StItem
+export { cartItems  };
