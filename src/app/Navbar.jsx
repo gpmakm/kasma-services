@@ -4,7 +4,7 @@ const Navbar = () => {
  
   return (
     <nav>
-      <span>KASMA SERVICES</span>
+    <a href="/">  <span>KASMA SERVICES</span></a>
       <ul style={{ display: 'flex' }} id='menuItems'>
 
         <li> <a href="#snacksnfood">Snacks</a> </li>
