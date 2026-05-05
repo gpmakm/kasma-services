@@ -11,6 +11,9 @@ const StationaryForm = (props) => {
     const [tid, setTid] = useState("");
     const { Canvas } = useQRCode();
     const [quantity,setQuantity]=useState(1)
+        const [quantity2,setQuantit ]=useState(1)
+            const [quantity3,setQuantity3]=useState(1)
+                const [quantity4,setQuantity4]=useState(1)
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     let orders = new Array();
@@ -32,13 +35,13 @@ const StationaryForm = (props) => {
         // }
 
         if (photocopy.checked) {
-            orders.push("Photocopy"+quantity)
+            orders.push("Photocopy - "+quantity)
         } if (colorcopy.checked) {
-            orders.push("Colorcopy"+quantity)
+            orders.push("Colorcopy - "+quantity2)
         } if (blackandwhiteprint.checked) {
-            orders.push("Printing(Black and white)")
+            orders.push("Printing(Black and white) - "+quantity3)
         } if (colorprint.checked) {
-            orders.push("Printing(Color)")
+            orders.push("Printing(Color) - "+quantity4)
         } if (lemination.checked) {
             orders.push("Lamination")
         } if (spiralbinding.checked) {
@@ -91,14 +94,17 @@ const StationaryForm = (props) => {
                             </div>
                             <div className='options'>
                                 <label htmlFor="colorcopy">ColorCopy for Rs. 5 per page</label> <input type="checkbox" name="service" id="colorcopy" />
+                                 <select value={quantity2} onChange={(e)=>{setQuantity2(e.target.value)}}> <option value={1}>1</option> <option value={2}>2</option> <option value={3}>3</option> <option value={4}>4</option> <option value={5}>5</option> <option value={6}>6</option> <option value={7}>7</option> <option value={8}>8</option> <option value={9}>9</option> <option value={10}>10</option> </select>
                             </div>
                             <div className='options'>
                                 <label htmlFor="blackandwhiteprint">Printing(Black and white) for Rs. 3 per page</label>
                                 <input type="checkbox" name="service" id="blackandwhiteprint" />
+                                 <select value={quantity3} onChange={(e)=>{setQuantity3(e.target.value)}}> <option value={1}>1</option> <option value={2}>2</option> <option value={3}>3</option> <option value={4}>4</option> <option value={5}>5</option> <option value={6}>6</option> <option value={7}>7</option> <option value={8}>8</option> <option value={9}>9</option> <option value={10}>10</option> </select>
                             </div>
                             <div className='options'>
                                 <label htmlFor="colorprint">Printing(Color) for Rs. 10 per page</label>
                                 <input type="checkbox" name="service" id="colorprint" />
+                                 <select value={quantity4} onChange={(e)=>{setQuantity4(e.target.value)}}> <option value={1}>1</option> <option value={2}>2</option> <option value={3}>3</option> <option value={4}>4</option> <option value={5}>5</option> <option value={6}>6</option> <option value={7}>7</option> <option value={8}>8</option> <option value={9}>9</option> <option value={10}>10</option> </select>
                             </div>
 
                             <div className='options'>
