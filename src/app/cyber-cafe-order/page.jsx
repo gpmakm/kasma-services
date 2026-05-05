@@ -10,6 +10,7 @@ const StationaryForm = (props) => {
     const [paymentMode, setPaymentMode] = useState("")
     const [tid, setTid] = useState("");
     const { Canvas } = useQRCode();
+    const [quantity,setQuantity]=useState(1)
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     let orders = new Array();
@@ -31,9 +32,9 @@ const StationaryForm = (props) => {
         // }
 
         if (photocopy.checked) {
-            orders.push("Photocopy")
+            orders.push("Photocopy"+quantity)
         } if (colorcopy.checked) {
-            orders.push("Colorcopy")
+            orders.push("Colorcopy"+quantity)
         } if (blackandwhiteprint.checked) {
             orders.push("Printing(Black and white)")
         } if (colorprint.checked) {
@@ -86,7 +87,7 @@ const StationaryForm = (props) => {
 
                             <div className='options'>
                                 <label htmlFor="photocopy">PhotoCopy for Rs. 3 per page</label>
-                                <input type="checkbox" name="service" id="photocopy" />
+                                <input type="checkbox" name="service" id="photocopy" />  <select value={quantity} onChange={(e)=>{setQuantity(e.target.value)}}> <option value={1}>1</option> <option value={2}>2</option> <option value={3}>3</option> <option value={4}>4</option> <option value={5}>5</option> <option value={6}>6</option> <option value={7}>7</option> <option value={8}>8</option> <option value={9}>9</option> <option value={10}>10</option> </select>
                             </div>
                             <div className='options'>
                                 <label htmlFor="colorcopy">ColorCopy for Rs. 5 per page</label> <input type="checkbox" name="service" id="colorcopy" />
