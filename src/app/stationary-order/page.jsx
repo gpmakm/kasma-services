@@ -16,11 +16,14 @@ const StItem = () => {
   const handleGluClick = (e) => { stationaryCart.push("Glue - " + quantity3); e.target.style = "text-decoration:line-through" }
   const handleScissorsClick = (e) => { stationaryCart.push("Scissors - " + quantity4); e.target.style = "text-decoration:line-through" }
   const handleNotebookClick = (e) => { stationaryCart.push("Notebook - " + quantity3); e.target.style = "text-decoration:line-through" }
-   const message = "Name: " + username + "\nContact: " + contact + "\nOrdered items: " + stationaryCart.join(", ");
+
+     
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-   
+       const message = "Name: " + username + "\nContact: " + contact + "\nOrdered items: " + stationaryCart.join(", ");
     const encodedMessage = encodeURIComponent(message);
+   
     const whatsappURL = `https://wa.me/${process.env.NEXT_PUBLIC_PAY_MERCHANT}?text=${encodedMessage}`;
     window.open(whatsappURL);
 
