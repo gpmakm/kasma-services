@@ -10,6 +10,7 @@ const Navbar = () => {
         <li> <a href="#snacksnfood">Snacks</a> </li>
         <li> <a href="#cybercafe">Cyber Cafe Services</a> </li>
         <li> <a href="#stationary">Stationary items</a> </li>
+          <li> <a href="#drinks">Drinks</a> </li>
         <li> <a href="#vegetablesngroceries">Vegetables and groceries</a> </li>
         {/* <li> <a href="/my-cart">My cart 🛒</a> </li> */}
       </ul>

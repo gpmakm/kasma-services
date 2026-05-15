@@ -5,6 +5,7 @@ import StationaryForm from "./cyber-cafe-order/page";
 import Navbar from "./Navbar";
 import StItem from "./stationary-order/page";
 import Vegetables from "./groceries-and-vegetables/page";
+import Drinks from "./drinks/page";
 
 export default function Home() {
 //console.log(process.env.NEXT_PUBLIC_VENDOR_PHONE);
@@ -41,6 +42,9 @@ export default function Home() {
        <div id="snacksnfood">
          <Food upiID={`upi://pay?pa=${process.env.PAY_MERCHANT}@upi&pn=Kasma%20Services%Office&cu=INR`} />
        </div>
+       <div id="drinks">
+        <Drinks/>
+        </div>
        <div id="vegetablesngroceries">
           <Vegetables/>
        </div>

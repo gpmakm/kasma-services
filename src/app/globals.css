@@ -80,7 +80,7 @@ justify-self: start;
 .container p a{
   margin: 0;
 }
-.vegetablecard{
+.vegetablecard,.drinkcard{
   width: 15vw;
   height: 20vh;
   border: 1px solid grey;
