@@ -1,6 +1,7 @@
 import React from 'react'
 import drink from '../../../public/drinks.json'
 import Image from 'next/image'
+// import im from '../../../images/'
 const Drinks = () => {
   return (
     <div>
@@ -10,7 +11,7 @@ const Drinks = () => {
                 {
                     drink.map((drinks)=>{
                         return (
-                           <div className='drinkcard'>
+                           <div className='drinkcard' key={drinks.id}>
                              <div key={drinks.id}>
                                 <Image src={drinks.image} alt={drinks.name} width={200} height={200} />
                                 <h4>{drinks.name}</h4>
