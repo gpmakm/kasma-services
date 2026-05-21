@@ -1,5 +1,6 @@
 import React from 'react'
 import drink from '../../../public/drinks.json'
+import Image from 'next/image'
 const Drinks = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const Drinks = () => {
                         return (
                            <div className='drinkcard'>
                              <div key={drinks.id}>
+                                <Image src={drinks.image} alt={drinks.name} width={200} height={200} />
                                 <h4>{drinks.name}</h4>
                                 <p>${drinks.price}</p>
                             </div>

@@ -2,26 +2,31 @@
     {
         "id":1,
         "name":"Ganne ka juice",
-        "price":"Rs. 20 per glass"
+        "price":"Rs. 20 per glass",
+        "image":"/images/ganne.jpg"
     },
     {
         "id":2,
         "name":"Sattu",
-        "price":"Rs. 20 per glass"
+        "price":"Rs. 20 per glass",
+        "image":"/images/sattu.png"
     },
     {
         "id":1,
         "name":"Mosambi ka juice",
-        "price":"Rs. 30 per glass"
+        "price":"Rs. 30 per glass",
+        "image":"/images/mosambi.jpg"
     },
     {
         "id":1,
         "name":"Anaar ka juice",
-        "price":"Rs. 40 per glass"
+        "price":"Rs. 40 per glass",
+        "image":"/images/anaar.jpg"
     },
     {
         "id":1,
         "name":"Dabh paani(Coconout water)",
-        "price":"Rs. 70 per shell"
+        "price":"Rs. 70 - Rs. 80 per shell",
+        "image":"/images/dabh.jpg"
     }
 ]
