@@ -10,7 +10,7 @@
         "id":2,
         "name":"Sattu",
         "price":"Rs. 20 per glass",
-        "image":"../../../images/sattu.png"
+        "image":"../../../public/images/sattu.png"
     },
     {
         "id":1,
