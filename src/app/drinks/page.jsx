@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import drink from '../../../public/drinks.json'
 import Image from 'next/image'

@@ -10,13 +10,13 @@
         "id":2,
         "name":"Sattu",
         "price":"Rs. 20 per glass",
-        "image":"../../../public/images/sattu.png"
+        "image":"/images/sattu.png"
     },
     {
         "id":1,
         "name":"Mosambi ka juice",
         "price":"Rs. 30 per glass",
-        "image":"../../../images/mosambijuice.png"
+        "image":"/images/mosambijuice.png"
     },
     {
         "id":1,
