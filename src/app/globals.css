@@ -81,8 +81,8 @@ justify-self: start;
   margin: 0;
 }
 .vegetablecard,.drinkcard{
-  width: 15vw;
-  height: 20vh;
+  width: auto;
+  height: 25vh;
   border: 1px solid grey;
   border-radius: 28px;
   display: flex;
@@ -90,6 +90,8 @@ justify-self: start;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin: 20px;
+  padding: 17px;
   box-shadow: 0px 4px 0px 4px rgba(0, 0, 0, 0.2);
 }
 form ul li button{
