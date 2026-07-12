@@ -167,6 +167,10 @@ a{
 
 
 @media screen and (max-width:768px) {
+  body {
+    width: 100vw;
+   
+  }
   form {
     width: 90vw;
   }
@@ -176,6 +180,7 @@ a{
   }
 
   nav {
+    width: 100%;
     height:auto;
     background-color: #FFAB0F;
   }
@@ -196,6 +201,10 @@ a{
     justify-content: center;
     margin: 25px;
     font-size: larger;
+  }
+  .drinkcard,.vegetablecard{
+   margin:35px;
+   height:auto;
   }
 
   
