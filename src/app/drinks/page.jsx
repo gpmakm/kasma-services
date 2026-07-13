@@ -2,12 +2,21 @@
 
 import React from 'react'
 import drink from '../../../public/drinks.json'
+//import fs from 'fs'
 import Image from 'next/image'
 
 const Drinks = () => {
     const addItem=(e)=>{
-        console.log(e.target.parentElement.querySelector('input').value)
-        console.log(e.target.parentElement.querySelector('input[name="quantity"]').value)
+        console.log(e.target.parentElement.querySelector('input').value+" : "+
+        e.target.parentElement.querySelector('input[name="quantity"]').value+" glasses")
+       
+            // fs.writeFileSync('/drinks.json', JSON.stringify(drink), 'utf-8', (err) => {
+            //     if (err) {
+            //         console.error('Error writing to file:', err);
+            //     }
+            // });
+            
+        
     }
   return (
     <div>
@@ -25,7 +34,7 @@ const Drinks = () => {
                                 <h4>{drinks.name}</h4>
                                 <p>{drinks.price}</p>
                                 <input type="text" value={drinks.name}  />
-                               <input type="number" name="quantity" placeholder='Enter quantity' />
+                               <input type="number" name="quantity" placeholder='Enter quantity in glasses' />
                                  <button type='button' onClick={addItem}>Add to cart</button>
                             </div>
                            </div>
