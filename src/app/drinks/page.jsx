@@ -11,8 +11,7 @@ const Drinks = () => {
     const addItem=(e)=>{
          drinksCart.push(e.target.parentElement.querySelector('input').value+" : "+
         e.target.parentElement.querySelector('input[name="quantity"]').value+" glasses")
-        console.log(e.target.parentElement.querySelector('input').value+" : "+
-        e.target.parentElement.querySelector('input[name="quantity"]').value+" glasses")
+      
         
        
             // fs.writeFileSync('/drinks.json', JSON.stringify(drink), 'utf-8', (err) => {
@@ -23,8 +22,15 @@ const Drinks = () => {
             
         
     }
-    const order=()=>{
-        console.log(drinksCart)
+    const order=async(n)=>{
+        let resp=await fetch('/backend/GetOrder',{
+            method:'POSt',
+            body:JSON.stringify(n),
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+        //console.log(resp)
     }
   return (
     <div>
@@ -39,9 +45,10 @@ const Drinks = () => {
                                 
                                 
                                 <Image src={drinks.image} alt={drinks.name} width={100} height={100} />
-                                <h4>{drinks.name}</h4>
+                               <h4><input type="text" value={drinks.name} style={{border: 'none', padding: '5px',fontWeight:'bold',fontSize:'16px'}}  /></h4>
                                 <p>{drinks.price}</p>
-                                <input type="text" value={drinks.name}  />
+                                
+                                
                                <input type="number" name="quantity" placeholder='Enter quantity in glasses' />
                                  <button type='button' onClick={addItem}>Add to cart</button>
                             </div>
@@ -50,7 +57,7 @@ const Drinks = () => {
                     })
                 }
             </div>
-             <button type='button' onClick={order}>Order</button>
+             <button type='button' onClick={order(drinksCart)}>Order</button>
         </div>
         {/* <Image src={im}/> */}
         </div>

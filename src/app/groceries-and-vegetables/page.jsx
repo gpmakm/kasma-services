@@ -1,5 +1,6 @@
 import React from 'react'
 import vegetables from '../../../public/Vegetables.json'
+
 const Vegetables = () => {
   return (
     <div>
