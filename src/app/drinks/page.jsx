@@ -6,9 +6,14 @@ import drink from '../../../public/drinks.json'
 import Image from 'next/image'
 
 const Drinks = () => {
+    const drinksCart=[]
+   
     const addItem=(e)=>{
+         drinksCart.push(e.target.parentElement.querySelector('input').value+" : "+
+        e.target.parentElement.querySelector('input[name="quantity"]').value+" glasses")
         console.log(e.target.parentElement.querySelector('input').value+" : "+
         e.target.parentElement.querySelector('input[name="quantity"]').value+" glasses")
+        
        
             // fs.writeFileSync('/drinks.json', JSON.stringify(drink), 'utf-8', (err) => {
             //     if (err) {
@@ -17,6 +22,9 @@ const Drinks = () => {
             // });
             
         
+    }
+    const order=()=>{
+        console.log(drinksCart)
     }
   return (
     <div>
@@ -42,6 +50,7 @@ const Drinks = () => {
                     })
                 }
             </div>
+             <button type='button' onClick={order}>Order</button>
         </div>
         {/* <Image src={im}/> */}
         </div>
