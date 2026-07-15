@@ -68,7 +68,7 @@ const StationaryForm = (props) => {
         let res = await data.json();
         alert(res.message);
         setIsSubmitting(false);
-        const message = `Name: ${username}\nPhone: ${phone}\n${orders.join(", ")}`;
+        const message = `From website \n Name: ${username}\nPhone: ${phone}\n${orders.join(", ")}`;
 
         const waUrl = `https://wa.me/${process.env.NEXT_PUBLIC_SHARMA_CYBER_CAFE}?text=${encodeURIComponent(message)}`;
 
