@@ -27,6 +27,7 @@ export default function Home() {
             <div className="code" style={{display:'flex',flexDirection:'column'}}>
               <code>Charges for delivery: Charges are mentioned but if you ordered for delievery then the prices will be increased from Rs.5 to Rs. 20</code>
             <code>Cyber cafe services will be delievered only at evening time</code>
+            <code style={{color:'red'}}>In case you are not getting response for your order then call +919334668262</code>
             </div>
          
 
