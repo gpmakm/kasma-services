@@ -115,7 +115,7 @@ const StationaryForm = (props) => {
                                 <label htmlFor="spiralbinding">Spiral Binding for Rs.20 per book</label>
                                 <input type="checkbox" name="service" id="spiralbinding" />
                             </div>
-
+<code>Upload your documents when uploaded using whatsapp, also mention how the order should be printed</code>
                         </div>
 
 
