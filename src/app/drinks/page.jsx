@@ -36,7 +36,7 @@ const Drinks = () => {
     <div>
         <div className="container">
             <div className="drinks">
-                <h3 style={{color:'red'}}>Not started yet!! Working over it</h3>
+                
                 {
                     drink.map((drinks)=>{
                         return (
