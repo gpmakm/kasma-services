@@ -22,10 +22,11 @@ const Drinks = () => {
             
         
     }
-    const order=async(n)=>{
+    const order=async(e)=>{
+e.preventDefault();
         let resp=await fetch('/backend/GetOrder',{
             method:'POSt',
-            body:JSON.stringify(n),
+            body:JSON.stringify(drinksCart),
             headers:{
                 'Content-Type':'application/json'
             }
@@ -45,7 +46,7 @@ const Drinks = () => {
                                 
                                 
                                 <Image src={drinks.image} alt={drinks.name} width={100} height={100} />
-                               <h4><input type="text" value={drinks.name} style={{border: 'none', padding: '5px',fontWeight:'bold',fontSize:'16px'}}  /></h4>
+                               <h4>{drinks.name}</h4>
                                 <p>{drinks.price}</p>
                                 
                                 
@@ -57,7 +58,7 @@ const Drinks = () => {
                     })
                 }
             </div>
-             <button type='button' onClick={order(drinksCart)}>Order</button>
+             <button type='button' onClick={order}>Order</button>
         </div>
         {/* <Image src={im}/> */}
         </div>

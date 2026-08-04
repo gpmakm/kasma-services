@@ -15,7 +15,7 @@ export default function Home() {
    
     <div className={styles.page}>
        
-      <main className={styles.main}>
+      <main className={styles.main} style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
        
         <div className="container" >
           <p>
@@ -47,9 +47,9 @@ export default function Home() {
        <div id="drinks">
         <Drinks/>
         </div>
-       <div id="vegetablesngroceries">
+       {/* <div id="vegetablesngroceries">
           <Vegetables/>
-       </div>
+       </div> */}
         <div id="sportsitems">
           <SportsItems/>
         </div>

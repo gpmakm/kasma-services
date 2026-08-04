@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { useQRCode } from 'next-qrcode';
 
- const Food = (props) => {
+const Food = (props) => {
     const { Canvas } = useQRCode()
     const [username, setUsername] = useState("");
     const [userphone, setUserphone] = useState("");
@@ -15,14 +15,15 @@ import { useQRCode } from 'next-qrcode';
     const [chai, setTeasetChai] = useState("Chai");
     const [paymentMode, setPaymentMode] = useState("")
     const [tid, setTid] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
     // const [postPay, setPostPay] = useState("Pay after service")
     const [sweets, setSweets] = useState("Mithai")
     const [sweetname, setSweetname] = useState("")
 
     const orders = new Array();
-
+let sweetCheckbox = document.getElementById('sweets');
     const enableText = () => {
-        let sweetCheckbox = document.getElementById('sweets');
+        
         let sweetText = document.getElementById('sweetname');
         if (sweetCheckbox.checked) {
             sweetText.disabled = false;
@@ -43,7 +44,7 @@ import { useQRCode } from 'next-qrcode';
             tid.disabled = true;
         }
     }
-    const sendData = (e) => {
+    const sendData = async (e) => {
         e.preventDefault();
         let litti = document.getElementById('litti');
         let samosa = document.getElementById('samosa');
@@ -78,7 +79,30 @@ import { useQRCode } from 'next-qrcode';
 
         let orderSummary = "Name: " + username + "\n" + "Phone: " + userphone + "\n" + orders + "\n" + tid
         console.log(orderSummary);
-        window.open("https://wa.me/919334668262/?text=Name: "+username+"%0APhone: "+userphone+"%0A"+orders)
+        let url = process.env.NEXT_PUBLIC_BACKEND_URL;
+
+
+       
+        let data = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: username,
+                phone: userphone,
+                service: "Khana",
+            })
+        })
+        let res = await data.json();
+        alert(res.message);
+        setIsSubmitting(false);
+        const message = `From website \n Name: ${username}\nPhone: ${userphone}\n${orderSummary}`;
+
+        const waUrl = `https://wa.me/${process.env.NEXT_PUBLIC_PAY_MERCHANT}?text=${encodeURIComponent(message)}`;
+
+        window.location.href = waUrl;
+       
 
     }
 
@@ -88,7 +112,7 @@ import { useQRCode } from 'next-qrcode';
 
             <form onSubmit={sendData}>
                 <h2>Ordering food</h2>
-                <input type="text" name="username" id="" className='text' value={username} placeholder='Enter your name' onChange={(e) => { setUsername(e.target.value) }} required/>
+                <input type="text" name="username" id="" className='text' value={username} placeholder='Enter your name' onChange={(e) => { setUsername(e.target.value) }} required />
                 <input type="number" name="phonenum" id="" className='text' value={userphone} placeholder='Enter your phone number' onChange={(e) => { setUserphone(e.target.value) }} required />
                 <label htmlFor="order">Select your order</label>
                 <div>
@@ -197,7 +221,9 @@ import { useQRCode } from 'next-qrcode';
                         </div>
                     )}
                 </div>
-                <button type='button' disabled>Place order</button>
+                <button type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send using whatsapp"}
+                </button>
             </form>
         </div>
     )
