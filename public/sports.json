@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name":"Tennis ball",
+        "price":"Rs. 10",
+        "image":"/images/tennisball.jpg"
+    },
+     {
+        "id":2,
+        "name":"Badminton",
+        "price":"Rs. 200 to 400",
+        "image":"/images/badmintonpic.jpg"
+    },
+     {
+        "id":3,
+        "name":"Shuttle cock",
+        "price":"Rs. 10",
+        "image":"/images/shuttlecock.jpg"
+    }
+]

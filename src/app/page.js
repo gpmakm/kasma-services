@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Food  from "./food-order/page";
+import SportsItems from "./sports/page";
 import StationaryForm from "./cyber-cafe-order/page";
 import Navbar from "./Navbar";
 import StItem from "./stationary-order/page";
@@ -49,6 +50,9 @@ export default function Home() {
        <div id="vegetablesngroceries">
           <Vegetables/>
        </div>
+        <div id="sportsitems">
+          <SportsItems/>
+        </div>
       </main>
     </div>
   );

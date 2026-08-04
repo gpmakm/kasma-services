@@ -12,6 +12,8 @@ const Navbar = () => {
         <li> <a href="#stationary">Stationary items</a> </li>
           <li> <a href="#drinks">Drinks</a> </li>
         <li> <a href="#vegetablesngroceries">Vegetables and groceries</a> </li>
+        <li> <a href="#sportsitems">Sports items</a> </li>
+        <li> <a href="#electrician">Electrician consultancy</a> </li>
         {/* <li> <a href="/my-cart">My cart 🛒</a> </li> */}
       </ul>
     </nav>
