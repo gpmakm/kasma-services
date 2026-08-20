@@ -77,6 +77,15 @@ justify-self: start;
   margin: 15px;
   padding: 10px;
 }
+#foodContainer div{
+  display: inline;
+  margin: 5px;
+  padding: 8px;
+  gap: 10px;
+}
+#foodContainer input[checkbox]{
+  margin-left: 8px;
+}
 .container p a{
   margin: 0;
 }

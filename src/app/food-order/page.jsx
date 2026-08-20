@@ -116,7 +116,7 @@ const Food = (props) => {
                 <input type="text" name="username" id="" className='text' value={username} placeholder='Enter your name' onChange={(e) => { setUsername(e.target.value) }} required />
                 <input type="number" name="phonenum" id="" className='text' value={userphone} placeholder='Enter your phone number' onChange={(e) => { setUserphone(e.target.value) }} required />
                 <label htmlFor="order">Select your order</label>
-                <div>
+                <div id='foodContainer'>
                     <div>
                         <label htmlFor="litti">Litti for Rs. 10 per piece (Fried)</label>
                         <input type="checkbox" name="item" id="litti" />
