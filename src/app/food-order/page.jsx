@@ -21,16 +21,16 @@ const Food = (props) => {
     const [sweetname, setSweetname] = useState("")
 
     const orders = new Array();
-let sweetCheckbox = document.getElementById('sweets');
-    const enableText = () => {
+// let sweetCheckbox = document.getElementById('sweets');
+//     const enableText = () => {
         
-        let sweetText = document.getElementById('sweetname');
-        if (sweetCheckbox.checked) {
-            sweetText.disabled = false;
-        } else {
-            sweetText.disabled = true;
-        }
-    }
+//         let sweetText = document.getElementById('sweetname');
+//         if (sweetCheckbox.checked) {
+//             sweetText.disabled = false;
+//         } else {
+//             sweetText.disabled = true;
+//         }
+//     }
     const enableTid = () => {
         const paynow = document.getElementById('paynow');
         const tid = document.getElementById('tid')
@@ -65,9 +65,10 @@ let sweetCheckbox = document.getElementById('sweets');
             orders.push("Breakfast/Lunch/Dinner")
         } if (chai.checked) {
             orders.push("Chai")
-        } if (sweetCheckbox.checked) {
-            orders.push(sweetText.value)
         }
+        //  if (sweetCheckbox.checked) {
+        //     orders.push(sweetText.value)
+        // }
 
         const list = () => {
             orders.forEach(element => {
@@ -117,12 +118,12 @@ let sweetCheckbox = document.getElementById('sweets');
                 <label htmlFor="order">Select your order</label>
                 <div>
                     <div>
-                        <label htmlFor="litti">Litti for Rs. 15 per pair (Fried)</label>
+                        <label htmlFor="litti">Litti for Rs. 10 per piece (Fried)</label>
                         <input type="checkbox" name="item" id="litti" />
 
                     </div>
                     <div>
-                        <label htmlFor="samosa">Samosa for Rs. 15 per pair</label>
+                        <label htmlFor="samosa">Samosa for Rs. 10 per piece</label>
                         <input type="checkbox" name="item" id="samosa" />
                     </div>
                     <div>
@@ -147,7 +148,7 @@ let sweetCheckbox = document.getElementById('sweets');
                     <div>
                         <label htmlFor="sweets">Sweets</label>
 
-                        <input type="checkbox" name="item" id="sweets" onChange={enableText} />
+                        <input type="checkbox" name="item" id="sweets" />
 
 
                         <input type="text" name="" id="sweetname" disabled='disabled' className='text' value={sweetname} placeholder='Enter sweets names' onChange={(e) => { setSweetname(e.target.value) }} />
